@@ -337,3 +337,60 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; }
 /* Focus mode */
 .focus-mode-active { background: #000 !important; }
 .focus-mode-active .sidebar, .focus-mode-active .page-title-area { opacity: 0; pointer-events: none; }
+/* ========== MOBILE STYLES FOR AUTH PAGES (Login/Signup) ========== */
+@media (max-width: 640px) {
+  /* Make the form container full width */
+  div[style*="max-width: 420px"],
+  div[style*="max-width: 440px"],
+  div[style*="max-width: 480px"] {
+    max-width: 92% !important;
+  }
+
+  /* Stack the feature grid into a single column */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Reduce card padding */
+  .card {
+    padding: 20px 16px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Smaller logo */
+  div[style*="width: 60px; height: 60px"] {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 26px !important;
+  }
+
+  /* Smaller headings */
+  h1[style*="font-size: 28px"] {
+    font-size: 24px !important;
+  }
+
+  /* Reduce margins */
+  div[style*="margin-bottom: 36px"] {
+    margin-bottom: 24px !important;
+  }
+
+  /* Prevent zoom on inputs (critical for mobile) */
+  .form-input,
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    font-size: 16px !important;
+  }
+
+  /* Adjust button padding */
+  .btn-lg {
+    padding: 12px 20px !important;
+    font-size: 15px !important;
+  }
+
+  /* Feature card styling */
+  div[style*="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px"] {
+    gap: 10px !important;
+  }
+}
