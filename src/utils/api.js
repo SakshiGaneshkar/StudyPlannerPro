@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API = axios.create({
   baseURL: 'https://study-planer-backend.vercel.app/api',
-  timeout: 10000,
+  timeout: 30000,
 });
 
 API.interceptors.request.use((config) => {
