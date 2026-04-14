@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://study-planer-backend-fb3a.vercel.app/api',
-  timeout: 20000,
+  baseURL: 'https://study-planer-backend.vercel.app/api',
+  timeout: 10000,
 });
 
 API.interceptors.request.use((config) => {
