@@ -30,7 +30,7 @@ const PrivateRoute = ({ children }) => {
 const PublicRoute = ({ children }) => {
   const { user, loading } = useAuth();
   if (loading) return null;
-  return user ? <Navigate to="/dashboard" replace /> : children;
+  return user ? <Navigate to="/login" replace /> : children;
 };
 
 const AppLayout = ({ children }) => {
